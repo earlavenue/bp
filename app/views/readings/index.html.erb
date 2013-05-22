@@ -1,0 +1,32 @@
+<h1>Readings</h1>
+
+<p><%= link_to 'Add a New Reading', new_reading_url %></p>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Systolic</th>
+      <th>Diastolic</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @readings.each do |reading| %>
+    <tr>
+      <td><%= reading.date.strftime('%I/%M/%Y, %l:%M %p')%></td>
+      <td><%= reading.systolic %></td>
+      <td><%= reading.diastolic %></td>
+
+      <td><%= link_to 'Show', reading_url(reading) %></td>
+      <td><%= link_to 'Edit', edit_reading_url(reading) %></td>
+      <td><%= link_to 'Destroy', reading_url(reading), method: 'delete', data: { confirm: "Do you really want to delete this reading?" } %></td>
+
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

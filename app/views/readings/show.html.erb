@@ -1,0 +1,19 @@
+<h1>Reading #<%= @reading.id %></h1>
+
+<p>
+  <b>Date:</b>
+  <%= @reading.date.strftime('%I/%M/%Y, %l:%M %p') %>
+
+</p>
+
+<p>
+  <b>Systolic:</b>
+  <%= @reading.systolic %>
+</p>
+
+<p>
+  <b>Diastolic:</b>
+  <%= @reading.diastolic %>
+</p>
+
+

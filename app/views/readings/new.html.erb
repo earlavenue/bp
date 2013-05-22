@@ -1,0 +1,31 @@
+<h1>Enter Your Reading</h1>
+
+
+<%= form_for (@reading) do |r| %>
+
+
+  <div>
+    <%= r.label :date %><br />
+    <%= r.time_select :date %>
+  </div>
+  <div>
+
+  </div>
+
+<p> Enter your Blood Pressure Reading</p>
+
+    <div>
+    <%= r.label :systolic %><br />
+    <%= r.number_field :systolic %>
+  </div>
+
+    <div>
+    <%= r.label :diastolic %><br />
+    <%= r.number_field :diastolic %>
+  </div>
+
+
+  <div>
+    <%= r.submit "Create Reading" %>
+  </div>
+<% end %>

@@ -1,0 +1,26 @@
+<h1>Editing Reading #<%= @reading.id %></h1>
+
+
+<%= form_tag(reading_url(@reading), method: 'put') do %>
+
+  <div>
+    <%= label_tag :date %><br />
+    <%= time_select_tag :date, @reading.date %>
+  </div>
+
+  <div>
+    <%= label_tag :systolic %><br />
+    <%= number_field_tag :systolic, @reading.systolic %>
+  </div>
+
+  <div>
+    <%= label_tag :diastolic %><br />
+    <%= number_field_tag :diastolic, @reading.diastolic %>
+  </div>
+
+
+  <div>
+    <%= submit_tag "Update Reading" %>
+  </div>
+
+<% end %>
